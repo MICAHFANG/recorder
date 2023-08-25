@@ -1,9 +1,13 @@
 {
   "name": "@micahfang/recorder",
-  "version": "1.4.5",
+  "version": "1.4.7",
   "description": "录制音频，可转成 PCM 或者 WAV 格式",
   "main": "index.js",
   "types": "./index.d.ts",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/MICAHFANG/recorder"
+  },
   "keywords": [
     "recorder",
     "microphone",
