@@ -135,18 +135,7 @@ function Recorder(config) {
   };
 }
 
-Recorder.check = () => {
-  try {
-    // 检查是否能够调用麦克风
-    window.AudioContext = window.AudioContext || window.webkitAudioContext;
-    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
-    window.URL = window.URL || window.webkitURL;
-    new AudioContext();
-    return !!navigator.getUserMedia;
-  } catch (e) {
-    return false;
-  }
-};
+Recorder.check = () => !!navigator.getUserMedia;
 
 // wav 格式
 function encodeWavBlob(bytes, channelCount, sampleBits, sampleRate) {
