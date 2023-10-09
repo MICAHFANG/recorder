@@ -135,7 +135,12 @@ function Recorder(config) {
   };
 }
 
-Recorder.check = () => !!navigator.getUserMedia;
+Recorder.check = () => {
+  let c = true;
+  c = !!navigator.mediaDevices.getUserMedia;
+  c = !!AudioContext;
+  return c;
+};
 
 // wav 格式
 function encodeWavBlob(bytes, channelCount, sampleBits, sampleRate) {
